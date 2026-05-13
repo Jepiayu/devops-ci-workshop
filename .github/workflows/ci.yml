@@ -33,10 +33,10 @@ jobs:
         sleep 3
     
     - name: Test endpoint health
-      run: curl -s http://localhost:5000/health
+      run: curl -f http://localhost:5000/health
     
     - name: Test endpoint metrics
-      run: curl -s http://localhost:5000/metrics
+      run: curl -f http://localhost:5000/metrics
     
     - name: Detener contenedor
       if: always()
